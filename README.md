@@ -24,6 +24,21 @@ node ./bin/cli.js <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 <!--TRANSFORMS_START-->
+
+Before
+
+```js
+const test1 = tryInvoke(foo, 'bar');
+const test2 = tryInvoke(foo, 'bar', ['baz']);
+```
+
+After
+
+```js
+const test1 = foo.bar?.();
+const test2 = foo.bar?.('baz');
+```
+
 <!--TRANSFORMS_END-->
 
 ## Contributing
