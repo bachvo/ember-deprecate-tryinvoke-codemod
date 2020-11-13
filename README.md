@@ -24,23 +24,7 @@ node ./bin/cli.js <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 <!--TRANSFORMS_START-->
-
-Before
-
-```js
-import { tryInvoke } from '@ember/utils';
-
-const test1 = tryInvoke(foo, 'bar');
-const test2 = tryInvoke(foo, 'bar', ['baz']);
-```
-
-After
-
-```js
-const test1 = foo.bar?.();
-const test2 = foo.bar?.('baz');
-```
-
+* [ember-deprecate-tryinvoke-codemod](transforms/ember-deprecate-tryinvoke-codemod/README.md)
 <!--TRANSFORMS_END-->
 
 ## Contributing

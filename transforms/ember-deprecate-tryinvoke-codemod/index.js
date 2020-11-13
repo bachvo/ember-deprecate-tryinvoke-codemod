@@ -47,5 +47,9 @@ module.exports = function transformer(file, api) {
     }
   });
 
+  if (emberUtilsImports.find(j.ImportSpecifier).length === 0) {
+    emberUtilsImports.remove();
+  }
+
   return output.toSource();
 };
