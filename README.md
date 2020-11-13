@@ -28,6 +28,8 @@ node ./bin/cli.js <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 Before
 
 ```js
+import { tryInvoke } from '@ember/utils';
+
 const test1 = tryInvoke(foo, 'bar');
 const test2 = tryInvoke(foo, 'bar', ['baz']);
 ```
