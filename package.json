@@ -8,7 +8,9 @@
     "update-docs": "codemod-cli update-docs",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
-  "bin": "./bin/cli.js",
+  "bin": {
+    "ember-deprecate-tryinvoke-codemod": "bin/cli.js"
+  },
   "keywords": [
     "codemod-cli"
   ],
@@ -29,5 +31,17 @@
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "description": "An Ember codemod to deprecate tryInvoke and replace it with optional chaining",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bachvo/ember-deprecate-tryinvoke-codemod.git"
+  },
+  "author": "bach vo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bachvo/ember-deprecate-tryinvoke-codemod/issues"
+  },
+  "homepage": "https://github.com/bachvo/ember-deprecate-tryinvoke-codemod#readme"
 }
