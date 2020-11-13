@@ -1,7 +1,7 @@
 # ember-deprecate-tryinvoke-codemod
 
 
-An Ember codemod to deprecate tryInvoke and replace the usage with [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining). See [RFC 673 deprecate tryInvoke](https://emberjs.github.io/rfcs/0673-deprecate-tryinvoke.html)
+An Ember codemod to deprecate `tryInvoke` util and replace the usage with [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining). See [RFC 673 deprecate tryInvoke](https://emberjs.github.io/rfcs/0673-deprecate-tryinvoke.html)
 
 ## Usage
 
