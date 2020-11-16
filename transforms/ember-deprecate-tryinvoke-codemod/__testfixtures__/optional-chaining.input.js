@@ -6,3 +6,4 @@ const test5 = tryInvoke(obj, 'key', ['foo', 1, { bar: 'baz' }, ['array']]);
 const test6 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}]);
 const test7 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}, null]);
 const test8 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}, null, undefined]);
+const test9 = tryInvoke(obj.args, actionName, [{ foo: 'bar' }]);
