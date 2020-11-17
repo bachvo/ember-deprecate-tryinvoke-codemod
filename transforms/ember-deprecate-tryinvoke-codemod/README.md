@@ -55,6 +55,7 @@ const test5 = tryInvoke(obj, 'key', ['foo', 1, { bar: 'baz' }, ['array']]);
 const test6 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}]);
 const test7 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}, null]);
 const test8 = tryInvoke(obj.args, 'key', ['foo', 1, { bar: 'baz' }, ['array'], () => {}, null, undefined]);
+const test9 = tryInvoke(obj.args, actionName, [{ foo: 'bar' }]);
 ```
 
 **Output** (<small>[optional-chaining.output.js](transforms/ember-deprecate-tryinvoke-codemod/__testfixtures__/optional-chaining.output.js)</small>):
@@ -67,6 +68,7 @@ const test5 = obj.key?.('foo', 1, { bar: 'baz' }, ['array']);
 const test6 = obj.args.key?.('foo', 1, { bar: 'baz' }, ['array'], () => {});
 const test7 = obj.args.key?.('foo', 1, { bar: 'baz' }, ['array'], () => {}, null);
 const test8 = obj.args.key?.('foo', 1, { bar: 'baz' }, ['array'], () => {}, null, undefined);
+const test9 = obj.args[actionName]?.({ foo: 'bar' });
 ```
 ---
 <a id="single-import-tryinvoke">**single-import-tryinvoke**</a>
